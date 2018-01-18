@@ -1,10 +1,14 @@
 package com.fhd.fileUploadService.conf;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.MediaType;
 import org.springframework.web.servlet.config.annotation.ContentNegotiationConfigurer;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+
+import com.fhd.fileUploadService.storage.LocalFileStorageService;
+import com.fhd.fileUploadService.storage.StorageService;
 
 @Configuration
 @EnableWebMvc
@@ -19,5 +23,11 @@ public class WebConfig extends WebMvcConfigurerAdapter {
 				.parameterName("mediaType")
 				.ignoreAcceptHeader(true);
 
+	}
+	
+	@Bean
+	StorageService storageService()
+	{
+	    return new LocalFileStorageService();
 	}
 }

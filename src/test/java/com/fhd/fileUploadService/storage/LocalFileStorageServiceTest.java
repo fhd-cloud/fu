@@ -21,10 +21,10 @@ import org.springframework.util.FileSystemUtils;
 
 //Sorts by method name
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
-public class StorageServiceTest {
+public class LocalFileStorageServiceTest {
 
 	MockMultipartFile file;
-	StorageService target;
+	LocalFileStorageService target;
 	String testFileName = "test-file.txt";
 	static Path testStorePath;
 
@@ -37,7 +37,7 @@ public class StorageServiceTest {
 	@Before
 	public void setup() throws IOException {
 
-		target = new StorageService();
+		target = new LocalFileStorageService();
 		target.init(testStorePath.toString());
 		file = new MockMultipartFile("file", testFileName, MediaType.TEXT_PLAIN_VALUE, "Testing".getBytes());
 	}

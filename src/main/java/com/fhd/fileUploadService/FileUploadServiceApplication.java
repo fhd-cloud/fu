@@ -20,6 +20,6 @@ public class FileUploadServiceApplication implements CommandLineRunner {
 	
 	@Override
 	public void run(String... arg) throws Exception {
-		storageService.init(arg.length > 0 ? arg[0] : null);
+		storageService.init(arg);
 	}
 }
