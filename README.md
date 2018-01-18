@@ -1,22 +1,21 @@
-# fileUpload
+# FileUpload Service
 
 ## SpringBoot RESTful API for File upload service
 
 ## Installation
-### With Maven
-`mvn clean install`
+#### With Maven
+Run `mvn clean install` to download all the dependencies and install locally
 
-### Without Maven
-`mvnw clean install`
+#### Without Maven
+Run `mvnw clean install` to download all the dependencies and install locally
 
 
 ## Running the Application
-### run below script (use start.bat / start.sh depends on your OS)
 ### In Windows
-`start.bat`
+Run `start.bat` to start the REST server
 
 ### In OSX
-`start.sh`
+Run `start.sh` to start the REST server
 
 ### REST API Endpoints
 
