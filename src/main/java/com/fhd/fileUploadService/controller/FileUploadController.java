@@ -104,7 +104,11 @@ public class FileUploadController {
 	}
 
 	private String createURL(String fileName) {
-		return MvcUriComponentsBuilder.fromMethodName(FileUploadController.class, "getFile", fileName).build()
-				.toString();
+		String url = "/api/files/"+fileName;
+		//MvcUriComponentsBuilder.fromMethodName(FileUploadController.class, "getFile", fileName).build()
+//				.toString();
+		
+		return url;
+		
 	}
 }
